@@ -12,8 +12,8 @@ import {
 } from 'lucide-react';
 
 const navigation = [
-  { name: 'Dashboard', href: '/', icon: LayoutDashboard },
-  { name: 'Draft Upload', href: '/draft', icon: FileText },
+  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+  { name: 'Draft Upload', href: '/draft-upload', icon: FileText },
   { name: 'Comments', href: '/comments', icon: MessageSquare },
   { name: 'Analytics', href: '/analytics', icon: BarChart3 },
 ];
@@ -130,7 +130,13 @@ function Layout({ children }) {
             <div className="flex-1 flex">
                <h1 className="my-auto text-xl font-semibold text-gray-900">{currentPage}</h1>
             </div>
-            <div className="ml-4 flex items-center md:ml-6">
+            <div className="ml-4 flex items-center md:ml-6 space-x-4">
+                <NavLink
+                  to="/"
+                  className="text-sm text-gray-600 hover:text-primary-600 font-medium px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
+                >
+                  ← Back to Home
+                </NavLink>
                 <div className="flex items-center space-x-2">
                   <div className="w-2.5 h-2.5 bg-success-500 rounded-full animate-pulse-soft"></div>
                   <span className="text-sm text-gray-600">System Online</span>

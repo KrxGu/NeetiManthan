@@ -76,3 +76,23 @@ minio-data/
 .env.local
 .env.production
 secrets/
+
+# Frontend dependencies and build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Docker volumes and data
+postgres_data/
+redis_data/
+minio_data/
+
+# Model cache and temporary files
+.cache/
+*.tmp
+*.temp
+
+# Local environment configuration
+.env.development.local
+.env.test.local
